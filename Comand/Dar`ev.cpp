@@ -105,7 +105,6 @@ void IndenticalHeightAndShoes(fstream& File) {
 	while (File.read((char*)&p, sizeof p))
 		People[counter++] = p;
 
-
 	p_Add("Люди з однаковою вагою і номером взуття.");
 
 	int k = 0;
@@ -127,17 +126,20 @@ void IndenticalHeightAndShoes(fstream& File) {
 	}
 	else {
 		p_Add();
+		bool printed[15] = { false }; 
 		for (int i = 0; i < counter - 1; i++) {
-			bool groupPrinted = false;
 			for (int j = i + 1; j < counter; j++) {
 				if (People[i].Weight == People[j].Weight && People[i].ShoesNumber == People[j].ShoesNumber) {
-					if (!groupPrinted) {
+					if (!printed[i]) { 
 						p_Add(People[i]);
 						cout << setw(15) << People[i].Surname << setw(10) << People[i].Weight << setw(10) << People[i].ShoesNumber << endl;
-						groupPrinted = true;
+						printed[i] = true; 
 					}
-					cout << setw(15) << People[j].Surname << setw(10) << People[j].Weight << setw(10) << People[j].ShoesNumber << endl;
-					p_Add(People[j]);
+					if (!printed[j]) { 
+						cout << setw(15) << People[j].Surname << setw(10) << People[j].Weight << setw(10) << People[j].ShoesNumber << endl;
+						p_Add(People[j]);
+						printed[j] = true; 
+					}
 				}
 			}
 		}
@@ -146,7 +148,6 @@ void IndenticalHeightAndShoes(fstream& File) {
 	File.close();
 	p_Close();
 }
-
 void TrueNum(int& num) {
 	do {
 		cin >> num;
