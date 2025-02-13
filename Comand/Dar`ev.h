@@ -19,5 +19,7 @@ void ShowPeople(PeopleInformation inf);
 void EnterPeople(PeopleInformation& People);
 void IndenticalHeightAndShoes(fstream& File);
 void TrueNum(int& num);
+void Normal(int& num);
+void Normal(double& num);
 
 #endif

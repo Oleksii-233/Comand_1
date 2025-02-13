@@ -13,10 +13,10 @@ void EnterPeople(PeopleInformation& People) {
 	cout << "Write the people name: "; cin.getline(People.Name, 50);
 	cout << "Write the people surname: "; cin.getline(People.Surname, 50);
 	cout << "Write the people sex: "; cin.getline(People.Sex, 50);
-	cout << "Write the people height: "; cin >> People.Height;
-	cout << "Write the people weight: "; cin >> People.Weight;
-	cout << "Write the people clothes number: "; cin >> People.ClothesNumber;
-	cout << "Write the people shoes numbeer: " ; cin >> People.ShoesNumber;
+	cout << "Write the people height: "; Normal(People.Height);
+	cout << "Write the people weight: "; Normal(People.Weight);
+	cout << "Write the people clothes number: "; Normal(People.ClothesNumber);
+	cout << "Write the people shoes numbeer: " ; Normal(People.ShoesNumber);
 }
 
 void WriteInFile(fstream& File) {
@@ -152,4 +152,16 @@ void TrueNum(int& num) {
 	do {
 		cin >> num;
 	} while (num <= 0 || num > 15);
+}
+
+void Normal(int& num) {
+	do {
+		cin >> num;
+	} while (num < 0);
+}
+
+void Normal(double& num) {
+	do {
+		cin >> num;
+	} while (num < 0);
 }

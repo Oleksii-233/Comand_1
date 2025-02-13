@@ -1,18 +1,3 @@
-???? ????????
-  N             Surname                Name  GenderHeightWeightClothes  Shoes
-  1                   1                   1       1    1    1      1       1
-Creating File
-  N             Surname                Name  GenderHeightWeightClothes  Shoes
-  1                   1                   1       1    1    1      1       1
-Читання всього файлу на екран.
-  N             Surname                Name  GenderHeightWeightClothes  Shoes
-  1                   1                   1       1    1    1      1       1
-Reading the entire file to the screen.
-  N             Surname                Name  GenderHeightWeightClothes  Shoes
-  1                   1                   1       1    1    1      1       1
-People with needs gender.
-  N             Surname                Name  GenderHeightWeightClothes  Shoes
-  1                   1                   1       1    1    1      1       1
 Choose what you want to do:
 0 - Create and write a file,
 1 - Read the file to the screen,
@@ -24,10 +9,20 @@ Choose what you want to do:
 7 - Sort the file by last name or first name,
 8 - Add file
 Enter another number to exit
-1
-Reading the entire file to the screen.
+0
+Enter count of people: 
+10
   N             Surname                Name  GenderHeightWeightClothes  Shoes
-  1                   1                   1       1    1    1      1       1
+  0                 Mas                 Man    Male  190   90     50      40
+  1                 Mag              Master    Male  200  100     56      50
+  2               Fruit              Orange  Female  170   50     49      39
+  3                 Man                 Hot    Male  200  100     50      50
+  4               Pigie                 Bad    Male  210  110     55      49
+  5              Wooman               Magic  Female  160   60     45      39
+  6                 Man              Gigant    Male  250  100     60      50
+  7           Vegetable               Onion    Male  155   45     39      33
+  8                 Box                 Tea    Male  180   76     51      45
+  9                 Hot              Kettle  Female  176   55     47      39
 Choose what you want to do:
 0 - Create and write a file,
 1 - Read the file to the screen,
@@ -40,3 +35,442 @@ Choose what you want to do:
 8 - Add file
 Enter another number to exit
 1111
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+0
+Enter count of people: 
+11
+  N             Surname                Name  GenderHeightWeightClothes  Shoes
+  0         Super - hot               Papervegetables   50  150      5       3
+  1              People                 Leg    Male  200  100     57      40
+  2                 Man               Bunny    Male  150   40     39      36
+  3              Wooman               Bunny  Female  160   40     39      36
+  4                 Man                Show    Male  250  120     60      49
+  5                Face                 Red  Female  150   40     44      36
+  6                 Man             Shampoo  Female   20    1      1       0
+  7                  Up               Seven  Female  180   70     55      45
+  8                 Bee                 Mad    Male  150   50     45      44
+  9              Number                 198  Female  176   67     56      43
+ 10                Girl               Anime  Female  140   40     40      35
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+11111
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+0
+Enter count of people: 
+12
+  N             Surname                Name  GenderHeightWeightClothes  Shoes
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+  0                                                    0    0      0       0
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+0
+Enter count of people: 
+12
+  N             Surname                Name  GenderHeightWeightClothes  Shoes
+100                 Cow                 Mad  Female  167   56     50      20
+101                Nace               Naice    Male  195   87     47      45
+102              Colour               Orang    Male  180   70     49      45
+103               Drick         Coca - cola  Female  187   76     50      39
+104                 Man               Clone      87  199   87     50      45
+105                 GTA               Vagos    Game  200  100     50      45
+106              Jonson                Carl    Male  180   87     50      45
+107             Versety                Tomy    Male  179   76     50      40
+108                GTA3                Clod    Male  190   80     53      45
+109              Jonson               Sweet    Male  187   87     50      45
+110               Smoke                 Big    Male  180   10     70      45
+111           Degter`ev             STALKER    Male  180   87     50      45
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+1111
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+111
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+11111
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+1
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+100                 Cow                 Mad    Female       167        56        50        20
+101                Nace               Naice      Male       195        87        47        45
+102              Colour               Orang      Male       180        70        49        45
+103               Drick         Coca - cola    Female       187        76        50        39
+104                 Man               Clone        87       199        87        50        45
+105                 GTA               Vagos      Game       200       100        50        45
+106              Jonson                Carl      Male       180        87        50        45
+107             Versety                Tomy      Male       179        76        50        40
+108                GTA3                Clod      Male       190        80        53        45
+109              Jonson               Sweet      Male       187        87        50        45
+110               Smoke                 Big      Male       180        10        70        45
+111           Degter`ev             STALKER      Male       180        87        50        45
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+2
+Input a gender
+Male
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+101                Nace               Naice      Male       195        87        47        45
+102              Colour               Orang      Male       180        70        49        45
+106              Jonson                Carl      Male       180        87        50        45
+107             Versety                Tomy      Male       179        76        50        40
+108                GTA3                Clod      Male       190        80        53        45
+109              Jonson               Sweet      Male       187        87        50        45
+110               Smoke                 Big      Male       180        10        70        45
+111           Degter`ev             STALKER      Male       180        87        50        45
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+2
+Input a gender
+Female
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+100                 Cow                 Mad    Female       167        56        50        20
+103               Drick         Coca - cola    Female       187        76        50        39
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+3
+People from indentical weight and shoes number.
+People with indentical weight and shoes
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+101                Nace               Naice      Male       195        87        47        45
+104                 Man               Clone        87       199        87        50        45
+106              Jonson                Carl      Male       180        87        50        45
+109              Jonson               Sweet      Male       187        87        50        45
+111           Degter`ev             STALKER      Male       180        87        50        45
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+4
+People with the right number of clothes and shoes.
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+100                 Cow                 Mad    Female       167        56        50        20
+103               Drick         Coca - cola    Female       187        76        50        39
+107             Versety                Tomy      Male       179        76        50        40
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+5
+People with months of average height and weight.
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+103               Drick         Coca - cola    Female       187        76        50        39
+107             Versety                Tomy      Male       179        76        50        40
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+6
+People with smallest clothes number and height
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+101                Nace               Naice      Male       195        87        47        45
+Smallest shoes number and weight
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+102              Colour               Orang      Male       180        70        49        45
+106              Jonson                Carl      Male       180        87        50        45
+110               Smoke                 Big      Male       180        10        70        45
+111           Degter`ev             STALKER      Male       180        87        50        45
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+7
+Choose variant of sorting 0 - surname , another number - name. 
+0
+Append information from file.
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+102              Colour               Orang      Male       180        70        49        45
+100                 Cow                 Mad    Female       167        56        50        20
+111           Degter`ev             STALKER      Male       180        87        50        45
+103               Drick         Coca - cola    Female       187        76        50        39
+105                 GTA               Vagos      Game       200       100        50        45
+108                GTA3                Clod      Male       190        80        53        45
+109              Jonson               Sweet      Male       187        87        50        45
+106              Jonson                Carl      Male       180        87        50        45
+104                 Man               Clone        87       199        87        50        45
+101                Nace               Naice      Male       195        87        47        45
+110               Smoke                 Big      Male       180        10        70        45
+107             Versety                Tomy      Male       179        76        50        40
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+7
+Choose variant of sorting 0 - surname , another number - name. 
+1
+Append information from file.
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+110               Smoke                 Big      Male       180        10        70        45
+106              Jonson                Carl      Male       180        87        50        45
+108                GTA3                Clod      Male       190        80        53        45
+104                 Man               Clone        87       199        87        50        45
+103               Drick         Coca - cola    Female       187        76        50        39
+100                 Cow                 Mad    Female       167        56        50        20
+101                Nace               Naice      Male       195        87        47        45
+102              Colour               Orang      Male       180        70        49        45
+111           Degter`ev             STALKER      Male       180        87        50        45
+109              Jonson               Sweet      Male       187        87        50        45
+107             Versety                Tomy      Male       179        76        50        40
+105                 GTA               Vagos      Game       200       100        50        45
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+8
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+113              Master              Master      Male       200       100        70        49
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+1
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+110               Smoke                 Big      Male       180        10        70        45
+106              Jonson                Carl      Male       180        87        50        45
+108                GTA3                Clod      Male       190        80        53        45
+104                 Man               Clone        87       199        87        50        45
+103               Drick         Coca - cola    Female       187        76        50        39
+100                 Cow                 Mad    Female       167        56        50        20
+101                Nace               Naice      Male       195        87        47        45
+102              Colour               Orang      Male       180        70        49        45
+111           Degter`ev             STALKER      Male       180        87        50        45
+109              Jonson               Sweet      Male       187        87        50        45
+107             Versety                Tomy      Male       179        76        50        40
+105                 GTA               Vagos      Game       200       100        50        45
+113              Master              Master      Male       200       100        70        49
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+111111
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+8
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+  1                   1                   1         1         1         1         1         1
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+1
+  N             Surname                Name    Gender    Height    Weight   Clothes     Shoes
+110               Smoke                 Big      Male       180        10        70        45
+106              Jonson                Carl      Male       180        87        50        45
+108                GTA3                Clod      Male       190        80        53        45
+104                 Man               Clone        87       199        87        50        45
+103               Drick         Coca - cola    Female       187        76        50        39
+100                 Cow                 Mad    Female       167        56        50        20
+101                Nace               Naice      Male       195        87        47        45
+102              Colour               Orang      Male       180        70        49        45
+111           Degter`ev             STALKER      Male       180        87        50        45
+109              Jonson               Sweet      Male       187        87        50        45
+107             Versety                Tomy      Male       179        76        50        40
+105                 GTA               Vagos      Game       200       100        50        45
+113              Master              Master      Male       200       100        70        49
+  1                   1                   1         1         1         1         1         1
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+1111111
