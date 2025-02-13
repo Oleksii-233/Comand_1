@@ -7,3 +7,36 @@ Creating File
 Читання всього файлу на екран.
   N             Surname                Name  GenderHeightWeightClothes  Shoes
   1                   1                   1       1    1    1      1       1
+Reading the entire file to the screen.
+  N             Surname                Name  GenderHeightWeightClothes  Shoes
+  1                   1                   1       1    1    1      1       1
+People with needs gender.
+  N             Surname                Name  GenderHeightWeightClothes  Shoes
+  1                   1                   1       1    1    1      1       1
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+1
+Reading the entire file to the screen.
+  N             Surname                Name  GenderHeightWeightClothes  Shoes
+  1                   1                   1       1    1    1      1       1
+Choose what you want to do:
+0 - Create and write a file,
+1 - Read the file to the screen,
+2 - Show records of a specific gender,
+3 - Have the same weight and shoe number
+4 - The clothing number is larger than 46 and the shoe size is smaller than 41,
+5 - People who are close to the average for weight and size
+6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,
+7 - Sort the file by last name or first name,
+8 - Add file
+Enter another number to exit
+1111

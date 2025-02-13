@@ -15,12 +15,19 @@ int main() {
 	int ans;
 
 	do {
-		cout << "Choose what you want to do:\n0 - Create and write a file,\n1 - Read the file to the screen,\n2 - Show records of a specific gender,\n3 - Have the same weight and shoe number" << endl;
-		cout << "4 - The clothing number is larger than 46 and the shoe size is smaller than 41,\n5 - People who are close to the average for weight and size" << endl;
-		cout << "6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,\n7 - Sort the file by last name or first name,\n8 - Add file" << endl;
-		cout << "Enter another number to exit" << endl;
+		protocol.open(name, ios::out | ios::app);
+
+		string text0 = "Choose what you want to do:\n0 - Create and write a file,\n1 - Read the file to the screen,\n2 - Show records of a specific gender,\n3 - Have the same weight and shoe number";
+		string text1 = "4 - The clothing number is larger than 46 and the shoe size is smaller than 41,\n5 - People who are close to the average for weight and size";
+		string text2 = "6 - People with the smallest shoe size and clothing number and people with the largest weight and shoe number,\n7 - Sort the file by last name or first name,\n8 - Add file";
+		string text3 = "Enter another number to exit";
+		
+		p_Add(text0); p_Add(text1); p_Add(text2); p_Add(text3);
+
+		cout << text0 << endl << text1 << endl <<text2 << endl << text3 << endl;
 
 		cin >> ans;
+		p_Add(to_string(ans));
 
 		switch (ans) {
 		case 0: {
@@ -50,12 +57,16 @@ int main() {
 		case 8: {
 			addtofile();
 		}break;
-		case 111: {
+		}
+
+		protocol.close();
+
+		if (ans == 111)
 			p_Read();
-		}
-		}
+
 		system("pause");
-	} while (ans >= 0 && ans <= 8);
+
+	} while (ans >= 0 && ans <= 8 || ans == 111);
 
 
 }

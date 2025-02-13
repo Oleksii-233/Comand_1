@@ -11,7 +11,7 @@ using namespace std;
 
 extern fstream protocol;
 
-extern char name[];
+extern char name[], bname[];
 
 struct PeopleInformation {
 	int Number = 0;
@@ -28,8 +28,6 @@ void IsOpen(fstream& file);
 void p_Add(string text);
 void p_Add(PeopleInformation p);
 void p_Add();
-void p_Inic();
-void p_Close();
 void p_Add_Arr(PeopleInformation* p, int l);
 void p_Read();
 

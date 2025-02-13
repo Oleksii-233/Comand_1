@@ -1,20 +1,17 @@
 #include "Nikitiuk.h"
 
-#include <iostream>
-
 void addtofile() {
 
 	PeopleInformation inf;
-	ifstream f1("PeopleInformation.dat", ios::binary);
+	ifstream f1(bname, ios::binary);
 	ofstream f2("PeopleInformation1.dat", ios::binary);
 
 	if (!f1.is_open() || !f2.is_open()) {
-		cout << "File isn`t open." << endl;
+		char e[] = "File isn`t open.";
+		cout << e << endl;
 		exit(1);
 	}
 
-	p_Inic();
-	p_Add("Append to file");
 	p_Add();
 
 	while (f1.read((char*)&inf, sizeof inf))
@@ -31,10 +28,9 @@ void addtofile() {
 
 	f1.close();
 	f2.close();
-	p_Close();
 
-	remove("PeopleInformation.dat");
-	rename("PeopleInformation1.dat", "PeopleInformation.dat");
+	remove(bname);
+	rename("PeopleInformation1.dat", bname);
 
 }
 
@@ -48,12 +44,12 @@ void My_Swap(PeopleInformation& p0, PeopleInformation& p1) {
 void My_Sort() {
 	PeopleInformation peo, p[15];
 	int len = 0;
-	char name[] = "PeopleInformation.dat";
 
-	fstream file(name, ios::in | ios::binary);
+	fstream file(bname, ios::in | ios::binary);
 
 	if (!file.is_open()) {
-		cout << "File isn`t open." << endl;
+		char e[] = "File isn`t open.";
+		cout << e << endl;
 		exit(1);
 	} 
 
@@ -62,11 +58,14 @@ void My_Sort() {
 
 	file.close();
 
-	int variat;
-	cout << "Choose variant of sorting 0 - surname , another number - name. ";
-	cin >> variat;
+	int variant;
+	char m[] = "Choose variant of sorting 0 - surname , another number - name. ";
+	p_Add(m);
+	cout << m << endl;
+	cin >> variant;
+	p_Add(to_string(variant));
 
-	if (!variat) {
+	if (!variant) {
 		for (int i = 0; i < len - 1; i++) {
 			for (int j = i + 1; j < len; j++)
 				if (strcmp(p[i].Surname, p[j].Surname) > 0)
@@ -81,23 +80,22 @@ void My_Sort() {
 		}
 	}
 
-	p_Inic();
 	p_Add("Append information from file.");
 	p_Add();
 	for (int i = 0; i < len; i++)
 		p_Add(p[i]);
-	p_Close();
 
 	fstream fbuf("bufer.dat", ios::out | ios::binary);
 	if (!fbuf.is_open()) {
-		cout << "File isn`t open." << endl;
+		char e[] = "File isn`t open.";
+		cout << e << endl;
 		exit(1);
 	}
 	fbuf.write((char*)&p, sizeof(p[0]) * len);
 	fbuf.close();
 
-	remove(name);
-	rename("bufer.dat", name);
+	remove(bname);
+	rename("bufer.dat", bname);
 
 }
 
@@ -157,7 +155,7 @@ void ShowSmall() {
 	PeopleInformation p[15], peo, pmin[15], pmax[15], p0[15], p1[15];
 	double max, min;
 	int len = 0, a = 0, b = 0;
-	fstream file("PeopleInformation.dat", ios::in | ios::binary);
+	fstream file(bname, ios::in | ios::binary);
 
 	if (!file.is_open()) {
 		cout << "File isn`t open." << endl;
@@ -182,8 +180,6 @@ void ShowSmall() {
 	min = Min_Height(pmin, a);
 	max = Max_Weight(pmax, b);
 	
-	p_Inic();
-
 	p_Add("People with smallest clothes number and height");
 	cout << "People with smallest clothes number and height: " << endl;
 	Shapka();
@@ -203,7 +199,5 @@ void ShowSmall() {
 			ShowPeople(pmax[i]);
 			p_Add(pmax[i]);
 		}
-
-	p_Close();
 
 }

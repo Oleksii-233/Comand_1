@@ -2,16 +2,8 @@
 
 #include <iomanip>
 
-char name[] = "protocol.txt";
+char name[] = "protocol.txt", bname[] = "PeopleInformation.dat";
 fstream protocol;
-
-void p_Inic() {
-	protocol.open(name, ios::out | ios::app);
-}
-
-void p_Close() {
-	protocol.close();
-}
 
 void IsOpen(fstream& file) {
 	if (!file.is_open()) {
@@ -54,5 +46,5 @@ void p_Read() {
 	while (getline(protocol, line))
 		cout << line << endl;
 
-	p_Close();
+	protocol.close();
 }

@@ -1,7 +1,7 @@
 ﻿#include "Dar`ev.h"
 
 void Shapka() {
-	cout << setw(3) << "N" << setw(20) << "Прізвище" << setw(20) << "Ім'я" << setw(8) << "Стать" << setw(5) << "Ріст" << setw(5) << "Вага" << setw(7) << "Одяг" << setw(7) << "Взуття" << endl;
+	cout << setw(3) << "N" << setw(20) << "Surname" << setw(20) << "Name" << setw(8) << "Gender" << setw(5) << "Height" << setw(5) << "Weight" << setw(7) << "Clothes" << setw(7) << "Shoes" << endl;
 }
 
 void ShowPeople(PeopleInformation inf) {
@@ -23,14 +23,13 @@ void WriteInFile(fstream& File) {
 	PeopleInformation People;
 	int NumberPeople = 0;
 
-	File.open("PeopleInformation.dat", ios::out | ios::binary);
+	File.open(bname, ios::out | ios::binary);
 
 	if (!File.is_open()) {
 		cout << "File isn`t open!" << endl;
 		exit(1);
 	}
 
-	p_Inic();
 	p_Add("Creating File");
 	p_Add();
 
@@ -44,7 +43,6 @@ void WriteInFile(fstream& File) {
 	}
 
 	File.close();
-	p_Close();
 }
 
 void ShowSex(fstream& File) {
@@ -53,14 +51,13 @@ void ShowSex(fstream& File) {
 	cout << "Input gender: "; cin.ignore(); cin.get(SexIndex, 15);
 	int k = 0;
 
-	File.open("PeopleInformation.dat", ios::in | ios::binary);
+	File.open(bname, ios::in | ios::binary);
 
 	if (!File.is_open()) {
 		cout << "File isn`t open!" << endl;
 		exit(1);
 	}
 
-	p_Inic();
 	p_Add("People with needs gender.");
 
 	Shapka();
@@ -86,24 +83,18 @@ void ShowSex(fstream& File) {
 	}
 
 	File.close();
-	p_Close();
 }
 
 void IndenticalHeightAndShoes(fstream& File) {
 	PeopleInformation People[15], p;
 	int counter = 0;
-	File.open("PeopleInformation.dat", ios::in | ios::binary);
+	File.open(bname, ios::in | ios::binary);
 
 	if (!File.is_open()) {
-
-		cout << "File isn`t open." << endl;
-
-		cout << "Файл не відкрито." << endl;
-
+		cout << "File dont opened" << endl;
 		exit(1);
 	}
 
-	p_Inic();
 
 	while (File.read((char*)&p, sizeof(p)))
 		People[counter++] = p;
@@ -136,16 +127,16 @@ void IndenticalHeightAndShoes(fstream& File) {
 				if (People[i].Weight == People[j].Weight && People[i].ShoesNumber == People[j].ShoesNumber)
 					k++;
 
-		p_Add("Люди з однаковим розміром взуття і вагою.");
+		p_Add("People with indentical weight and shoes");
 		if (!k) {
-			cout << "Такі люди відсутні." << endl;
-			p_Add("Відсутні.");
+			cout << "This people is mising" << endl;
+			p_Add("Mising");
 
 		}
 		else {
 			bool printed[15] = { false };
 
-			cout << setw(10) << "Прізвище" << setw(20) << "Вага" << setw(20) << "Взуття" << endl;
+			cout << setw(10) << "Surname" << setw(20) << "Weight" << setw(20) << "Shoes" << endl;
 			p_Add();
 			for (int i = 0; i < counter - 1; i++)
 				for (int j = i + 1; j < counter; j++)
@@ -162,8 +153,6 @@ void IndenticalHeightAndShoes(fstream& File) {
 
 						}
 					}
-
-			p_Close();
 
 		}
 

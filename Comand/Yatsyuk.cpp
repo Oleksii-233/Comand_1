@@ -4,16 +4,14 @@ void readfromfile(fstream& file) {
 
 	PeopleInformation inf;
 
-	file.open("PeopleInformation.dat", ios::in, ios::binary);
+	file.open(bname, ios::in, ios::binary);
 
 	if (!file.is_open()) {
-		cout << "File isn`t open." << endl;
+		char e[] = "File isn`t open";
+		p_Add(e);
+		cout << e << endl;
 		exit(1);
 	}
-
-	p_Inic();
-
-	p_Add("Reading the entire file to the screen.");
 
 	Shapka();
 	p_Add();
@@ -23,23 +21,24 @@ void readfromfile(fstream& file) {
 	}
 
 	file.close();
-	p_Close();
 
 }
 
 void sortbysize(fstream& file) {
 	PeopleInformation inf;
 	int k = 0;
-	file.open("PeopleInformation.dat", ios::in, ios::binary);
+	file.open(bname, ios::in, ios::binary);
 
 	if (!file.is_open()) {
-		cout << "File isn`t open." << endl;
+		char e[] = "File isn`t open.";
+		p_Add(e);
+		cout << e << endl;
 		exit(1);
 	}
-	p_Inic();
-	p_Add("People with the right number of clothes and shoes.");
 
+	p_Add("People with the right number of clothes and shoes.");
 	cout << "Surnames of people whose clothing number is greater than 46 and shoe size is less than 41:\n";
+
 	while (file.read((char*)&inf, sizeof(inf)))
 	{
 		if (inf.ClothesNumber > 46 && inf.ShoesNumber < 41) {
@@ -62,7 +61,6 @@ void sortbysize(fstream& file) {
 	}
 
 	file.close();
-	p_Close();
 
 }
 
@@ -81,7 +79,9 @@ double avweight(fstream& file) {
 	}
 
 	if (count == 0) {
-		cout << "There are no entries in the file to calculate the average weight." << endl;
+		char e[] = "There are no entries in the file to calculate the average weight.";
+		cout << e << endl;
+		p_Add(e);
 		return 0.;
 	}
 	else
@@ -103,7 +103,9 @@ double avheight(fstream& file) {
 	}
 
 	if (count == 0) {
-		cout << "There are no entries in the file to calculate the average height." << endl;
+		char e[] = "There are no entries in the file to calculate the average height.";
+		p_Add(e);
+		cout << e << endl;
 		return 0.;
 	}
 	else
@@ -112,14 +114,14 @@ double avheight(fstream& file) {
 
 void sortaverage(fstream& file) {
 	PeopleInformation inf;
-	file.open("PeopleInformation.dat", ios::in, ios::binary);
+	file.open(bname, ios::in, ios::binary);
 
 	if (!file.is_open()) {
-		cout << "File isn`t open." << endl;
+		char e[] = "File isn`t open.";
+		p_Add(e);
+		cout << e << endl;
 		exit(1);
 	}
-
-	p_Inic();
 
 	double avhe = avheight(file);
 	double avwe = avweight(file);
@@ -150,6 +152,5 @@ void sortaverage(fstream& file) {
 	}
 
 	file.close();
-	p_Close();
 
 }
