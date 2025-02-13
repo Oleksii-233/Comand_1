@@ -92,18 +92,22 @@ void ShowSex(fstream& File) {
 void IndenticalHeightAndShoes(fstream& File) {
 	PeopleInformation People[15], p;
 	int counter = 0;
-
 	File.open("PeopleInformation.dat", ios::in | ios::binary);
 
 	if (!File.is_open()) {
+
 		cout << "File isn`t open." << endl;
+
+		cout << "Файл не відкрито." << endl;
+
 		exit(1);
 	}
 
 	p_Inic();
 
-	while (File.read((char*)&p, sizeof p))
+	while (File.read((char*)&p, sizeof(p)))
 		People[counter++] = p;
+
 
 	p_Add("People from indentical weight and shoes number.");
 
@@ -123,33 +127,52 @@ void IndenticalHeightAndShoes(fstream& File) {
 	if (k == 0) {
 		cout << "People not find." << endl;
 		p_Add("People not find.");
-	}
-	else {
-		p_Add();
-		bool printed[15] = { false }; 
-		for (int i = 0; i < counter - 1; i++) {
-			for (int j = i + 1; j < counter; j++) {
-				if (People[i].Weight == People[j].Weight && People[i].ShoesNumber == People[j].ShoesNumber) {
-					if (!printed[i]) { 
-						p_Add(People[i]);
-						cout << setw(15) << People[i].Surname << setw(10) << People[i].Weight << setw(10) << People[i].ShoesNumber << endl;
-						printed[i] = true; 
-					}
-					if (!printed[j]) { 
-						cout << setw(15) << People[j].Surname << setw(10) << People[j].Weight << setw(10) << People[j].ShoesNumber << endl;
-						p_Add(People[j]);
-						printed[j] = true; 
-					}
-				}
-			}
+
+		File.close();
+
+		int k = 0;
+		for (int i = 0; i < counter - 1; i++)
+			for (int j = i + 1; j < counter; j++)
+				if (People[i].Weight == People[j].Weight && People[i].ShoesNumber == People[j].ShoesNumber)
+					k++;
+
+		p_Add("Люди з однаковим розміром взуття і вагою.");
+		if (!k) {
+			cout << "Такі люди відсутні." << endl;
+			p_Add("Відсутні.");
+
 		}
+		else {
+			bool printed[15] = { false };
+
+			cout << setw(10) << "Прізвище" << setw(20) << "Вага" << setw(20) << "Взуття" << endl;
+			p_Add();
+			for (int i = 0; i < counter - 1; i++)
+				for (int j = i + 1; j < counter; j++)
+					if (People[i].Weight == People[j].Weight && People[i].ShoesNumber == People[j].ShoesNumber) {
+						if (!printed[i]) {
+							p_Add(People[i]);
+							cout << setw(10) << People[i].Surname << setw(20) << People[i].Weight << setw(20) << People[i].ShoesNumber << endl;
+							printed[i] = true;
+						}
+						if (!printed[j]) {
+							p_Add(People[j]);
+							cout << setw(10) << People[j].Surname << setw(20) << People[j].Weight << setw(20) << People[j].ShoesNumber << endl;
+							printed[j] = true;
+
+						}
+					}
+
+			p_Close();
+
+		}
+
 	}
 
-	File.close();
-	p_Close();
 }
+
 void TrueNum(int& num) {
 	do {
 		cin >> num;
-	} while (num <= 0 || num >= 15);
+	} while (num <= 0 || num > 15);
 }
