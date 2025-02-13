@@ -13,7 +13,7 @@ void readfromfile(fstream& file) {
 
 	p_Inic();
 
-	p_Add("Читання всього файлу на екран.");
+	p_Add("Reading the entire file to the screen.");
 
 	Shapka();
 	p_Add();
@@ -37,9 +37,9 @@ void sortbysize(fstream& file) {
 		exit(1);
 	}
 	p_Inic();
-	p_Add("Люди із потрібним номером одягу і взуття.");
+	p_Add("People with the right number of clothes and shoes.");
 
-	cout << "Прізвища людей, в яких ном. одягу більше 46 та розмір взуття менше 41:\n";
+	cout << "Surnames of people whose clothing number is greater than 46 and shoe size is less than 41:\n";
 	while (file.read((char*)&inf, sizeof(inf)))
 	{
 		if (inf.ClothesNumber > 46 && inf.ShoesNumber < 41) {
@@ -50,8 +50,8 @@ void sortbysize(fstream& file) {
 
 
 	if (k == 0) {
-		cout << "Відсутні..." << endl;
-		p_Add("Такі люди відсутні.");
+		cout << "Missing..." << endl;
+		p_Add("There are no such people.");
 	}
 	else {
 		file.clear(); file.seekg(0);
@@ -81,7 +81,7 @@ double avweight(fstream& file) {
 	}
 
 	if (count == 0) {
-		cout << "Записи у файлі відсутні для підрахування середньої ваги." << endl;
+		cout << "There are no entries in the file to calculate the average weight." << endl;
 		return 0.;
 	}
 	else
@@ -103,7 +103,7 @@ double avheight(fstream& file) {
 	}
 
 	if (count == 0) {
-		cout << "Записи у файлі відсутні для підрахування середнього росту." << endl;
+		cout << "There are no entries in the file to calculate the average height." << endl;
 		return 0.;
 	}
 	else
@@ -128,8 +128,8 @@ void sortaverage(fstream& file) {
 	file.seekg(0);
 
 	int k = 0;
-	p_Add("Люди в межах середнього росту та ваги.");
-	cout << "Люди з ростом +-10% від середнього росту та вагою +-5%: \n";
+	p_Add("People with months of average height and weight.");
+	cout << "People with a difference of ±10% from the average height and weight ±5%: \n";
 	Shapka();
 	while (file.read((char*)&inf, sizeof inf))
 		if (inf.Height < avhe * 1.1 && inf.Height>avhe * 0.9 && inf.Weight < avwe * 1.05 && inf.Weight > avwe * 0.95) {
@@ -138,8 +138,8 @@ void sortaverage(fstream& file) {
 		}
 
 	if (k == 0) {
-		p_Add("Такі люди відсутні.");
-		cout << "Відсутні." << endl;
+		p_Add("There are no such people.");
+		cout << "Missing." << endl;
 	}
 	else {
 		file.clear(); file.seekg(0);
