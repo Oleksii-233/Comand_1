@@ -15,14 +15,14 @@ void p_Close() {
 
 void IsOpen(fstream& file) {
 	if (!file.is_open()) {
-		cout << "Файл для протоколу не відкритий." << endl;
+		cout << "Not open." << endl;
 		exit(1);;
 	}
 }
 
 void p_Add() {
 	IsOpen(protocol);
-	protocol << setw(3) << "N" << setw(20) << "Прізвище" << setw(20) << "Ім'я" << setw(8) << "Стать" << setw(5) << "Ріст" << setw(5) << "Вага" << setw(7) << "Одяг" << setw(7) << "Взуття" << endl;
+	protocol << setw(3) << "N" << setw(20) << "Surname" << setw(20) << "Name" << setw(8) << "Gender" << setw(5) << "Height" << setw(5) << "Weight" << setw(7) << "Clothes" << setw(7) << "Shoes" << endl;
 }
 
 void p_Add(string text) {

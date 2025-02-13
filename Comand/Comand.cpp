@@ -8,8 +8,8 @@
 using namespace std;
 
 int main() {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
 
 	fstream file;
 	int ans;

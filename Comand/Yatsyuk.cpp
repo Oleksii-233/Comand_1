@@ -7,7 +7,7 @@ void readfromfile(fstream& file) {
 	file.open("PeopleInformation.dat", ios::in, ios::binary);
 
 	if (!file.is_open()) {
-		cout << "Не вдалось відкрити файл." << endl;
+		cout << "File isn`t open." << endl;
 		exit(1);
 	}
 
@@ -33,7 +33,7 @@ void sortbysize(fstream& file) {
 	file.open("PeopleInformation.dat", ios::in, ios::binary);
 
 	if (!file.is_open()) {
-		cout << "Не вдалось відкрити файл." << endl;
+		cout << "File isn`t open." << endl;
 		exit(1);
 	}
 	p_Inic();
@@ -115,7 +115,7 @@ void sortaverage(fstream& file) {
 	file.open("PeopleInformation.dat", ios::in, ios::binary);
 
 	if (!file.is_open()) {
-		cout << "Файл не відкритий." << endl;
+		cout << "File isn`t open." << endl;
 		exit(1);
 	}
 

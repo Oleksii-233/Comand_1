@@ -9,20 +9,19 @@ void addtofile() {
 	ofstream f2("PeopleInformation1.dat", ios::binary);
 
 	if (!f1.is_open() || !f2.is_open()) {
-		cout << "Файл не вдалось відкрити." << endl;
+		cout << "File isn`t open." << endl;
 		exit(1);
 	}
 
 	p_Inic();
-	p_Add("Додавання до файлу.");
+	p_Add("Append to file");
 	p_Add();
 
 	while (f1.read((char*)&inf, sizeof inf))
 		f2.write((char*)&inf, sizeof inf);
 
 	int num;
-	cout << "К-ть, яку хочете дописати: "; TrueNum(num); cin.get();
-	cout << "Введите дані:\n";
+	cout << "Enter count of people: "; TrueNum(num); cin.get();
 	for (int i = 0; i <= num - 1; i++)
 	{
 		EnterPeople(inf);
@@ -54,17 +53,17 @@ void My_Sort() {
 	fstream file(name, ios::in | ios::binary);
 
 	if (!file.is_open()) {
-		cout << "Файл не відкрито." << endl;
+		cout << "File isn`t open." << endl;
 		exit(1);
-	} // Перевірка на відкриття файл
+	} 
 
 	while (file.read((char*)&peo, sizeof(peo)))
-		p[len++] = peo; // Зчитування для масиву структур із підрахуванням кількості у файлові
+		p[len++] = peo; 
 
 	file.close();
 
 	int variat;
-	cout << "Виберіть за чим сортувати 0 - за прізвищем, будь - яке інше значення - за ім'ям. ";
+	cout << "Choose variant of sorting 0 - surname , another number - name. ";
 	cin >> variat;
 
 	if (!variat) {
@@ -73,17 +72,17 @@ void My_Sort() {
 				if (strcmp(p[i].Surname, p[j].Surname) > 0)
 					My_Swap(p[i], p[j]);
 		}
-	} // Сортування за прізвищем
+	} 
 	else {
 		for (int i = 0; i < len - 1; i++) {
 			for (int j = i + 1; j < len; j++)
 				if (strcmp(p[i].Name, p[j].Name) > 0)
 					My_Swap(p[i], p[j]);
 		}
-	} // Сортування за ім'ям
+	}
 
 	p_Inic();
-	p_Add("Сортування вмісту файлу.");
+	p_Add("Append information from file.");
 	p_Add();
 	for (int i = 0; i < len; i++)
 		p_Add(p[i]);
@@ -91,7 +90,7 @@ void My_Sort() {
 
 	fstream fbuf("bufer.dat", ios::out | ios::binary);
 	if (!fbuf.is_open()) {
-		cout << "Файл буфер не відкрито." << endl;
+		cout << "File isn`t open." << endl;
 		exit(1);
 	}
 	fbuf.write((char*)&p, sizeof(p[0]) * len);
@@ -161,7 +160,7 @@ void ShowSmall() {
 	fstream file("PeopleInformation.dat", ios::in | ios::binary);
 
 	if (!file.is_open()) {
-		cout << "Файл не відкрито." << endl;
+		cout << "File isn`t open." << endl;
 		exit(1);
 	}
 
@@ -185,8 +184,8 @@ void ShowSmall() {
 	
 	p_Inic();
 
-	p_Add("Найменший розмір одягу та ріст");
-	cout << "Люди з найменшим розміром одягу та найменшим ростом:" << endl;
+	p_Add("People with smallest clothes number and height");
+	cout << "People with smallest clothes number and height: " << endl;
 	Shapka();
 	p_Add();
 	for (int i = 0; i < a; i++) 
@@ -195,8 +194,8 @@ void ShowSmall() {
 			p_Add(pmin[i]);
 		}
 	
-	p_Add("Найменша розмір ноги та вага");
-	cout << "Люди з найбільшим розміром ноги та вагою:" << endl; 
+	p_Add("Smallest shoes number and weight");
+	cout << "People with biggest shoes number and weight: " << endl; 
 	Shapka();
 	p_Add();
 	for (int i = 0; i < b; i++)

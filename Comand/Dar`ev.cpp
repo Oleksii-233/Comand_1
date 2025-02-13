@@ -9,14 +9,14 @@ void ShowPeople(PeopleInformation inf) {
 }
 
 void EnterPeople(PeopleInformation& People) {
-	cout << "Введіть номер людини: "; cin >> People.Number; cin.ignore();
-	cout << "Введіть ім'я людини: "; cin.getline(People.Name, 50);
-	cout << "Введіть прізвище людини: "; cin.getline(People.Surname, 50);
-	cout << "Введіть стать людини: "; cin.getline(People.Sex, 50);
-	cout << "Введіть зріст людини: "; cin >> People.Height;
-	cout << "Введіть вагу людини: "; cin >> People.Weight;
-	cout << "Введіть номер одягу людини: "; cin >> People.ClothesNumber;
-	cout << "Введіть номер взуття людини: "; cin >> People.ShoesNumber;
+	cout << "Write the people number: "; cin >> People.Number; cin.ignore();
+	cout << "Write the people name: "; cin.getline(People.Name, 50);
+	cout << "Write the people surname: "; cin.getline(People.Surname, 50);
+	cout << "Write the people sex: "; cin.getline(People.Sex, 50);
+	cout << "Write the people height: "; cin >> People.Height;
+	cout << "Write the people weight: "; cin >> People.Weight;
+	cout << "Write the people clothes number: "; cin >> People.ClothesNumber;
+	cout << "Write the people shoes numbeer: " ; cin >> People.ShoesNumber;
 }
 
 void WriteInFile(fstream& File) {
@@ -26,15 +26,15 @@ void WriteInFile(fstream& File) {
 	File.open("PeopleInformation.dat", ios::out | ios::binary);
 
 	if (!File.is_open()) {
-		cout << "Файл не створено!" << endl;
+		cout << "File isn`t open!" << endl;
 		exit(1);
 	}
 
 	p_Inic();
-	p_Add("Файл створено");
+	p_Add("Creating File");
 	p_Add();
 
-	cout << "Введіть кількість людей: "; TrueNum(NumberPeople);
+	cout << "Enter count of people: "; TrueNum(NumberPeople);
 
 	for (int i = 0; i < NumberPeople; i++) {
 		EnterPeople(People);
@@ -50,18 +50,18 @@ void WriteInFile(fstream& File) {
 void ShowSex(fstream& File) {
 	PeopleInformation People;
 	char SexIndex[15] = "\0";
-	cout << "Введіть стать: "; cin.ignore(); cin.get(SexIndex, 15);
+	cout << "Input gender: "; cin.ignore(); cin.get(SexIndex, 15);
 	int k = 0;
 
 	File.open("PeopleInformation.dat", ios::in | ios::binary);
 
 	if (!File.is_open()) {
-		cout << "Файл не відкрито!" << endl;
+		cout << "File isn`t open!" << endl;
 		exit(1);
 	}
 
 	p_Inic();
-	p_Add("Люди заданої статі.");
+	p_Add("People with needs gender.");
 
 	Shapka();
 	while (File.read((char*)&People, sizeof People)) {
@@ -74,8 +74,8 @@ void ShowSex(fstream& File) {
 
 	if (k == 0) {
 		system("cls");
-		cout << "Людей заданої статі не знайдено." << endl;
-		p_Add("Люди заданої статі відсутні.");
+		cout << "People not find." << endl;
+		p_Add("People not find.");
 	}
 	else {
 		File.clear(); File.seekg(0);
@@ -96,7 +96,7 @@ void IndenticalHeightAndShoes(fstream& File) {
 	File.open("PeopleInformation.dat", ios::in | ios::binary);
 
 	if (!File.is_open()) {
-		cout << "Файл не відкрито." << endl;
+		cout << "File isn`t open." << endl;
 		exit(1);
 	}
 
@@ -105,10 +105,10 @@ void IndenticalHeightAndShoes(fstream& File) {
 	while (File.read((char*)&p, sizeof p))
 		People[counter++] = p;
 
-	p_Add("Люди з однаковою вагою і номером взуття.");
+	p_Add("People from indentical weight and shoes number.");
 
 	int k = 0;
-	cout << setw(10) << "Прізвище" << setw(10) << "Вага" << setw(20) << "Взуття" << endl;
+	cout << setw(10) << "Surname" << setw(10) << "Weight" << setw(20) << "Shoes" << endl;
 	for (int i = 0; i < counter - 1; i++) {
 
 		for (int j = i + 1; j < counter; j++) {
@@ -121,8 +121,8 @@ void IndenticalHeightAndShoes(fstream& File) {
 	}
 
 	if (k == 0) {
-		cout << "Такі люди відсутні." << endl;
-		p_Add("Такі люди відстуні в записах.");
+		cout << "People not find." << endl;
+		p_Add("People not find.");
 	}
 	else {
 		p_Add();
