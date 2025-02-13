@@ -26,15 +26,18 @@ void WriteInFile(fstream& File) {
 	File.open(bname, ios::out | ios::binary);
 
 	if (!File.is_open()) {
-		cout << "File isn`t open!" << endl;
+		char e[] = "File isn`t open!";
+		p_Add(e);
+		cout << e << endl;
 		exit(1);
 	}
 
-	p_Add("Creating File");
+	char a[] = "Enter count of people: ";
+	cout << a; TrueNum(NumberPeople);
+
+	p_Add(a); p_Add(to_string(NumberPeople));
+
 	p_Add();
-
-	cout << "Enter count of people: "; TrueNum(NumberPeople);
-
 	for (int i = 0; i < NumberPeople; i++) {
 		EnterPeople(People);
 		p_Add(People);
@@ -47,20 +50,23 @@ void WriteInFile(fstream& File) {
 
 void ShowSex(fstream& File) {
 	PeopleInformation People;
-	char SexIndex[15] = "\0";
-	cout << "Input gender: "; cin.ignore(); cin.get(SexIndex, 15);
+	char SexIndex[15] = "\0", t[] = "Input a gender";
+
+	cout << t; cin.ignore(); cin.get(SexIndex, 15);
+	p_Add(t); p_Add(SexIndex);
 	int k = 0;
 
 	File.open(bname, ios::in | ios::binary);
 
 	if (!File.is_open()) {
-		cout << "File isn`t open!" << endl;
+		char e[] = "File isn`t open!";
+		p_Add(e);
+		cout << e << endl;
 		exit(1);
 	}
 
-	p_Add("People with needs gender.");
-
 	Shapka();
+
 	while (File.read((char*)&People, sizeof People)) {
 
 		if (strcmp(People.Sex, SexIndex) == 0) {
@@ -91,7 +97,9 @@ void IndenticalHeightAndShoes(fstream& File) {
 	File.open(bname, ios::in | ios::binary);
 
 	if (!File.is_open()) {
-		cout << "File dont opened" << endl;
+		char e[] = "File dont opened";
+		p_Add();
+		cout << e << endl;
 		exit(1);
 	}
 
@@ -99,41 +107,25 @@ void IndenticalHeightAndShoes(fstream& File) {
 	while (File.read((char*)&p, sizeof(p)))
 		People[counter++] = p;
 
+	File.close();
 
 	p_Add("People from indentical weight and shoes number.");
 
 	int k = 0;
-	cout << setw(10) << "Surname" << setw(10) << "Weight" << setw(20) << "Shoes" << endl;
-	for (int i = 0; i < counter - 1; i++) {
-
-		for (int j = i + 1; j < counter; j++) {
-			if (People[i].Weight < People[j].Weight) {
-				swap(People[i], People[j]);
-			}
+	for (int i = 0; i < counter - 1; i++)
+		for (int j = i + 1; j < counter; j++)
 			if (People[i].Weight == People[j].Weight && People[i].ShoesNumber == People[j].ShoesNumber)
 				k++;
-		}
-	}
+	
 
 	if (k == 0) {
-		cout << "People not find." << endl;
-		p_Add("People not find.");
-
-		File.close();
-
-		int k = 0;
-		for (int i = 0; i < counter - 1; i++)
-			for (int j = i + 1; j < counter; j++)
-				if (People[i].Weight == People[j].Weight && People[i].ShoesNumber == People[j].ShoesNumber)
-					k++;
-
+		char te[] = "People not find.";
+		cout << te << endl;
+		p_Add(te);
+	}
+	else {
 		p_Add("People with indentical weight and shoes");
-		if (!k) {
-			cout << "This people is mising" << endl;
-			p_Add("Mising");
 
-		}
-		else {
 			bool printed[15] = { false };
 
 			cout << setw(10) << "Surname" << setw(20) << "Weight" << setw(20) << "Shoes" << endl;
@@ -153,11 +145,7 @@ void IndenticalHeightAndShoes(fstream& File) {
 
 						}
 					}
-
-		}
-
 	}
-
 }
 
 void TrueNum(int& num) {

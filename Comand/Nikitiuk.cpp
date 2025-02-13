@@ -158,7 +158,9 @@ void ShowSmall() {
 	fstream file(bname, ios::in | ios::binary);
 
 	if (!file.is_open()) {
-		cout << "File isn`t open." << endl;
+		char e[] = "File isn`t open.";
+		p_Add(e);
+		cout << e << endl;
 		exit(1);
 	}
 
